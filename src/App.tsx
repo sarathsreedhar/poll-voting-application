@@ -1,9 +1,12 @@
+import Layout from './components/Layout'
 import { QuestionList } from './features/poll/QuestionList'
 
 function App() {
   return (
     <div className="App">
-      <QuestionList />
+      <Layout>
+        <QuestionList />
+      </Layout>
     </div>
   )
 }

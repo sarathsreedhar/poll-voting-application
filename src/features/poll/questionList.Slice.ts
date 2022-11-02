@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
 import { QuestionListState } from '../../lib/types'
-import { fetchQuestionList } from './questionAPI'
+import { fetchQuestionList } from './question.API'
 
 const initialState: QuestionListState = {
   questionList: [],
