@@ -22,20 +22,27 @@ export const QuestionListPage = () => {
     cursor: pointer;
   `
 
+  const TitleElem = styled.h2`
+    text-align: center;
+  `
+
   const { data, isLoading, isError } = useGetQuestionListQuery()
 
   if (isLoading) return <Loading />
   if (isError || !data) return <h4>Something went worng</h4>
 
   return (
-    <QuestionListContainerElem>
-      {data.map((item, i) => {
-        return (
-          <StyledLink to={`${item.url}`} key={i}>
-            <QuestionBox item={item} />
-          </StyledLink>
-        )
-      })}
-    </QuestionListContainerElem>
+    <>
+      <TitleElem data-testid="question-title"> Poll Questions</TitleElem>
+      <QuestionListContainerElem>
+        {data.map((item, i) => {
+          return (
+            <StyledLink to={`${item.url}`} key={i}>
+              <QuestionBox item={item} data-testid="question-box" />
+            </StyledLink>
+          )
+        })}
+      </QuestionListContainerElem>
+    </>
   )
 }

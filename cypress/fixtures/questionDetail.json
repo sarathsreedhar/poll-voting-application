@@ -1,0 +1,11 @@
+{
+  "question": "How do you do?",
+  "choices": [
+    { "choice": "Bad", "votes": 0, "url": "/questions/19/choices/105" },
+    { "choice": "Okay", "votes": 0, "url": "/questions/19/choices/106" },
+    { "choice": "Superb", "votes": 0, "url": "/questions/19/choices/107" },
+    { "choice": "Terrible", "votes": 0, "url": "/questions/19/choices/108" }
+  ],
+  "published_at": "2022-10-26T09:43:10.863Z",
+  "url": "/questions/19"
+}

@@ -19,11 +19,13 @@ export const QuestionBox: FC<QuestionBoxProps> = ({ item }) => {
 
   return (
     <>
-      <Title>{item.question}</Title>
+      <Title data-testid="question-box-title">{item.question}</Title>
       <StartedTime>{formatTimeStamp(item.published_at)}</StartedTime>
       <ul>
         {item.choices.map((choiceData, i) => (
-          <li>{choiceData.choice}</li>
+          <li key={i} data-testid="question-box-choice">
+            {choiceData.choice}
+          </li>
         ))}
       </ul>
     </>

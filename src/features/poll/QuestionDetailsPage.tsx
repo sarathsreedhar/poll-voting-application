@@ -36,6 +36,10 @@ export const QuestionDetailsPage: FC = () => {
     margin: 1em;
   `
 
+  const PageTitleElem = styled.h3`
+    text-align: center;
+  `
+
   const voteClickHandler = (url: string) => {
     updateVote(url)
   }
@@ -56,12 +60,12 @@ export const QuestionDetailsPage: FC = () => {
 
   return (
     <QuestionBoxElem>
-      <h3>Question details</h3>
+      <PageTitleElem data-testid="question-details-title">Question details</PageTitleElem>
       <TitleElem>{data.question}</TitleElem>
       <ul>
         {data.choices.map((choiceData, i) => (
           <li key={i}>
-            <ChoiceBoxElem>
+            <ChoiceBoxElem data-testid="poll-box-choice">
               <div>{choiceData.choice}</div> <div>{choiceData.votes}</div>
               <span>
                 <ProgressBarElem max={totalVotes} value={choiceData.votes}></ProgressBarElem>
