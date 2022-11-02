@@ -10,9 +10,3 @@ export interface Question {
   url: string
   choices: Choice[]
 }
-
-export interface QuestionListState {
-  questionList: Question[]
-  isLoading: boolean
-  isError: boolean
-}

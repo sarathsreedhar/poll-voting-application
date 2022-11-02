@@ -1,20 +1,21 @@
 import { type FC } from 'react'
 import styled from '@emotion/styled/macro'
+import { Question } from '../poll.types'
+import { formatTimeStamp } from '../../../lib/helper'
 
-import { Question } from '../../lib/types'
-import { formatTimeStamp } from '../../lib/helper'
-
-interface QuestionDetailsProps {
+interface QuestionBoxProps {
   item: Question
-  voteForChoice: Function
 }
 
-export const QuestionDetails: FC<QuestionDetailsProps> = ({ item, voteForChoice }) => {
+export const QuestionBox: FC<QuestionBoxProps> = ({ item }) => {
   const Title = styled.h4`
     color: blue;
   `
 
-  const StartedTime = styled.p``
+  const StartedTime = styled.p`
+    text-decoration: none;
+    color: black;
+  `
 
   return (
     <>
